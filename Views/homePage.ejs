@@ -1,0 +1,86 @@
+<body>
+  <!-- <h1>Hi baby</h1>
+  <% for (d of data){%>
+  <p><%= d.name%></p>
+  <% } %> -->
+  <header>
+    <div class="logo">
+      <img src="/images/logo2.png" alt="" />
+    </div>
+    <div class="buttons">
+      <div class="dropdown inr">
+        <span>INR<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+        <div class="dropdown-content">
+          <p>INR</p>
+        </div>
+      </div>
+      <div class="dropdown btc">
+        <span>INR<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+        <div class="dropdown-content">
+          <p>INR</p>
+        </div>
+      </div>
+      <div class="dropdown">BUY BTC</div>
+    </div>
+    <div class="end">
+      <div id="timer-box"><div id="timer">0</div></div>
+      <div class="connect">
+        <i class="fa-brands fa-telegram"></i>Connect on Telegram
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="background" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
+  <h1>Best Price To Trade</h1>
+  <section>
+    <div>
+      0.69%
+      <p>5 Mins</p>
+    </div>
+    <div>
+      1%
+      <p>1 Hour</p>
+    </div>
+    <div class="large" id="c1">
+      ₹ 24,41,147
+      <p>Average BTC/INR net price including commission</p>
+    </div>
+    <div>
+      4.32 %
+      <p>1 Day</p>
+    </div>
+    <div>
+      16%
+      <p>7 Days</p>
+    </div>
+  </section>
+  <div class="container">
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">#</div>
+        <div class="col col-2">Name</div>
+        <div class="col col-3">Last Traded Price</div>
+        <div class="col col-4">Buy / Sell Price</div>
+        <div class="col col-5">Volume</div>
+        <div class="col col-6">Base Unit</div>
+      </li>
+      <% for (var i = 0; i < data.length; i++) { %>
+      <li class="table-row">
+        <div class="col col-1"><%= i+1 %></div>
+        <div class="col col-2"><%= data[i].name %></div>
+        <div class="col col-3"><%= data[i].last %></div>
+        <div class="col col-4"><%= data[i].buy %>/<%= data[i].sell%></div>
+        <div class="col col-5"><%= data[i].volume %></div>
+        <div class="col col-6"><%= data[i].base_unit %></div>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+  <hr />
+  <footer>
+    <p>Copyright © 2023 HodlInfo.com</p>
+    <p>Support</p>
+  </footer>
+</body>
